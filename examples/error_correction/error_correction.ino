@@ -42,9 +42,9 @@ void loop() {
     state = pid_iterate(calibration, state);
     // print results back on serial
     Serial.print("Target:\t");
-    Serial.print(state.target);
+    Serial.println(state.target);
     Serial.print("Actual:\t");
-    Serial.print(state.actual);
+    Serial.println(state.actual);
     Serial.print("Output:\t");
-    Serial.print(state.output);
+    Serial.println(state.output);
 }
