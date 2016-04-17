@@ -37,14 +37,14 @@ void loop() {
         state.target = (double) Serial.read();
         // same as above for actual value
         state.actual = (double) Serial.read();
+        // now do PID calculation and assign output back to state
+        state = pid_iterate(calibration, state);
+        // print results back on serial
+        Serial.print("Target:\t");
+        Serial.println(state.target);
+        Serial.print("Actual:\t");
+        Serial.println(state.actual);
+        Serial.print("Output:\t");
+        Serial.println(state.output);
     }
-    // now do PID calculation and assign output back to state
-    state = pid_iterate(calibration, state);
-    // print results back on serial
-    Serial.print("Target:\t");
-    Serial.println(state.target);
-    Serial.print("Actual:\t");
-    Serial.println(state.actual);
-    Serial.print("Output:\t");
-    Serial.println(state.output);
 }
