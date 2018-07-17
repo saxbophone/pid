@@ -6,14 +6,14 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-PID_State          KEYWORD1
-PID_Calibration    KEYWORD1
+PID_State	KEYWORD1
+PID_Calibration	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-pid_iterate        KEYWORD2
+pid_iterate	KEYWORD2
 
 #######################################
 # Instances (KEYWORD2)
